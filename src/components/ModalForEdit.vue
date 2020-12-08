@@ -5,26 +5,15 @@
         <slot name="modalText">Редактирование поля:</slot>
       </div>
       <div class="modal__form">
-        <slot name="form">
-          
-        </slot>
+        <slot name="form"></slot>
       </div>
     </div>
   </div>
-  
 </template>
 
 <script>
 export default {
   name: 'ModalForEdit',
-  data() {
-    return {
-
-    }
-  },
-  methods: {
-
-  }
 }
 </script>
 

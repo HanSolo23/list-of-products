@@ -7,10 +7,19 @@
       <p>Price</p>
     </div>
     <div class="product">
-      <Product v-for="(product, index) in paginatedProducts" :key="index" :product="product" :index="index"></Product>
+      <Product 
+        v-for="(product, index) in paginatedProducts" 
+        :key="index" :product="product" 
+        :index="index">
+      </Product>
     </div>
     <div class="pagination">
-      <div class="page" v-for="page in pages" :key="page" @click="nextPage(page)" :class="{ active: page === pageNumber }">
+      <div 
+        class="page" 
+        v-for="page in pages" 
+        :key="page" 
+        @click="nextPage(page)" 
+        :class="{ active: page === pageNumber }">
         {{ page }}
       </div>
     </div>
@@ -69,10 +78,6 @@ export default {
 
 
 <style scoped lang="scss">
-@font-face {
-  font-family: 'Montserrat';
-  src: url('~@/assets/fonts/Montserrat-Regular.ttf') format('ttf'),
-}
 .table {
   display: flex;
   flex-direction: column;
@@ -82,7 +87,7 @@ export default {
   padding: 10px;
   background-color: rgb(96, 150, 120);
   box-shadow: 2px 2px 10px 1px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: sans-serif;
   .title {
     display: flex;
     justify-content: space-around;
